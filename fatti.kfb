@@ -1,0 +1,81 @@
+tempo(Cloud,mite,nuvoloso)
+tempo(Clear,mite,bel_tempo)
+tempo(Cloud,mite,bel_tempo)
+tempo(Clear,calda,bel_tempo)
+tempo(Rain,freddo,brutto_tempo)
+tempo(Rain,mite,brutto_tempo)
+tipologia (Rilassante,bel_tempo,Famiglia,piace_natura,Blu,'Luoghi marittimi ,mare')
+tipologia (Rilassante,bel_tempo,Famiglia,no_piace_natura,Blu,'Famiglia parchi giardini divertimenti')
+tipologia (Rilassante,bel_tempo,Famiglia,piace_natura,Verde,'Famiglia parchi giardini divertimenti')
+tipologia (Rilassante,bel_tempo,Famiglia,no_piace_natura,Verde,'Famiglia parchi giardini divertimenti')
+
+tipologia (Rilassante,brutto_tempo,Famiglia,piace_storia,piace_arte,'gallerie')
+tipologia (Rilassante,brutto_tempo,Famiglia,no_piace_storia,piace_shopping,'mercatini delle pulci, negozi souvenir')
+tipologia (Rilassante,brutto_tempo,Famiglia,piace_storia,no_piace_arte,'musei specializzati, musei, ecc')
+tipologia (Rilassante,brutto_tempo,Famiglia,no_piace_storia,no_piace_shopping,'cibo e bevande')
+
+tipologia (Rilassante,bel_tempo,Affari,sempre_occupato,no_bere,'RISTORANTI')
+tipologia (Rilassante,bel_tempo,Affari,sempre_occupato,bere,'LOCALI NOTTURNI')
+tipologia (Rilassante,bel_tempo,Affari,no_sempre_occupato,piace_natura,'SPIAGGE ECC')
+tipologia (Rilassante,bel_tempo,Affari,no_sempre_occupato,no_piace_natura,'SOUVENIRE')
+
+tipologia (Rilassante,brutto_tempo,Affari,sempre_occupato,no_bere,'RISTORANTI')
+tipologia (Rilassante,brutto_tempo,Affari,sempre_occupato,bere,'LOCALI NOTTURNI')
+tipologia (Rilassante,brutto_tempo,Affari,no_sempre_occupato,piace_storia,'MUSEI ECC')
+tipologia (Rilassante,brutto_tempo,Affari,no_sempre_occupato,no_piace_storia,'SOUVENIRE')
+
+
+tipologia(Rilassante,bel_tempo,Amici,piace_natura,Blu,'MARE ECC..')
+tipologia(Rilassante,bel_tempo,Amici,piace_natura,Verde,'BOOSCHI_PINETE ECC..')
+tipologia(Rilassante,bel_tempo,Amici,no_piace_natura,piace_citta,'giri per la citta ECC..')
+tipologia(Rilassante,bel_tempo,Amici,no_piace_natura,no_piace_citta,'MUSEI')
+
+tipologia(Rilassante,brutto_tempo,Amici,no_piace_tipico,piace_giochi,'escape room ecc')
+tipologia(Rilassante,brutto_tempo,Amici,no_piace_tipico,no_piace_giochi,'shopping')
+tipologia(Rilassante,brutto_tempo,Amici,piace_tipico,mangiare,'CIBO')
+tipologia(Rilassante,brutto_tempo,Amici,piace_tipico,bere,'BEVANDE')
+
+tipologia(Rilassante,bel_tempo,Coppia,piace_natura,Blu,'MARE ECC..')
+tipologia(Rilassante,bel_tempo,Coppia,piace_natura,Verde,'BOOSCHI_PINETE ECC..')
+tipologia(Rilassante,bel_tempo,Coppia,no_piace_natura,piace_citta,'giri per la citta ECC..')
+tipologia(Rilassante,bel_tempo,Coppia,no_piace_natura,no_piace_citta,'musei')
+
+tipologia(Rilassante,brutto_tempo,Coppia,piace_storia,piace_arte,'ARTE E GALLERIE')
+tipologia(Rilassante,brutto_tempo,Coppia,piace_storia,no_piace_arte,'MUSEI NON ARTI ')
+tipologia(Rilassante,brutto_tempo,Coppia,no_piace_storia,no_piace_shopping,'Cibo e bevande')
+tipologia(Rilassante,brutto_tempo,Coppia,no_piace_storia,piace_shopping,'shopping e negozi')
+
+tipologia(Rilassante,bel_tempo,Solo,piace_natura,Blu,'MARE ECC..')
+tipologia(Rilassante,bel_tempo,Solo,piace_natura,Verde,'BOOSCHI_PINETE ECC..')
+tipologia(Rilassante,bel_tempo,Solo,no_piace_natura,piace_citta,'giri per la citta ECC..')
+tipologia(Rilassante,bel_tempo,Solo,no_piace_natura,no_piace_citta,'musei')
+
+tipologia(Rilassante,brutto_tempo,Solo,piace_storia,piace_arte,'ARTE E GALLERIE')
+tipologia(Rilassante,brutto_tempo,Solo,piace_storia,no_piace_arte,'MUSEI NON ARTI ')
+tipologia(Rilassante,brutto_tempo,Solo,no_piace_storia,no_piace_shopping,'Cibo e bevande')
+tipologia(Rilassante,brutto_tempo,Solo,no_piace_storia,piace_shopping,'shopping e negozi')
+
+
+
+tipologia(Avventuriera,brutto_tempo,Famiglia,no_piace_bagnarsi,no_piace_storia,'CIBO E BEVANDE')
+tipologia(Avventuriera,brutto_tempo,Famiglia,no_piace_bagnarsi,piace_storia,'MUSEI')
+tipologia(Avventuriera,brutto_tempo,Famiglia,piace_bagnarsi,no_piace_natura,'MONUMENTI STORICI')
+tipologia(Avventuriera,brutto_tempo,Famiglia,piace_bagnarsi,piace_natura,'ESCURSIONI')
+
+tipologia(Avventuriera,bel_tempo,Famiglia,piace_natura,piace_sport,'ESCURSIONI')
+tipologia(Avventuriera,bel_tempo,Famiglia,piace_natura,no_piace_sport,'SPIAGGE ECC')
+tipologia(Avventuriera,bel_tempo,Famiglia,no_piace_natura,piace_storia,'monumenti e castelli')
+tipologia(Avventuriera,bel_tempo,Famiglia,no_piace_natura,no_piace_storia,'piazza e passeggiate in centro')
+
+
+tipologia(Avventuriera,brutto_tempo,Coppia,no_piace_bagnarsi,no_piace_storia,'CIBO E BEVANDE')
+tipologia(Avventuriera,brutto_tempo,Coppia,no_piace_bagnarsi,piace_storia,'MUSEI')
+tipologia(Avventuriera,brutto_tempo,Coppia,piace_bagnarsi,no_piace_natura,'MONUMENTI STORICI')
+tipologia(Avventuriera,brutto_tempo,Coppia,piace_bagnarsi,piace_natura,'ESCURSIONI')
+
+tipologia(Avventuriera,bel_tempo,Coppia,piace_natura,piace_sport,'ESCURSIONI')
+tipologia(Avventuriera,bel_tempo,Coppia,piace_natura,no_piace_sport,'SPIAGGE ECC')
+tipologia(Avventuriera,bel_tempo,Coppia,no_piace_natura,piace_storia,'monumenti e castelli')
+tipologia(Avventuriera,bel_tempo,Coppia,no_piace_natura,no_piace_storia,'piazza e passeggiate in centro')
+
+

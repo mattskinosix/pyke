@@ -1,0 +1,82 @@
+tipo_vacanza($ans)
+  Dove vui andare in vacanza? (Rilassante,Avventuriera,Sfrenata)
+  ---
+  $ans= string(4-40)     
+
+tipo_nucleo($ans)
+  CHe nucleo siete? (Famiglia-Amici-Coppia-Solo-Affari)
+  ---
+  $ans = string(4-40)
+arte($ans)
+  Ti piace l'arte?
+  ---
+  $ans = yn
+
+natura($ans)
+  Ti piace la natura?
+  ---
+  $ans = yn
+
+mare_o_collina($ans)
+	Ti piace di pi il verde o il mare? (Verde,Blu)
+	---
+	$ans= string(2-10) 
+
+passeggiatina($ans)
+	Ti piacerebbe fare delle belle escursioni? 
+	---
+	$ans= yn
+
+storia($ans)
+	Ti piacciono i fatti storici? (si-no)
+	---
+	$ans= string (2-2)
+
+shopping($ans)
+	Vediamo, un souvernir del viaggio qui  d'obbligo, ne volete trovare un po? (si-no)
+	---
+	$ans= string(2-2)
+
+tempo($ans)
+	Sei tutto il giorno occupato? (Libero,Occupato)
+	---
+	$ans= string(5-20)
+
+bere($ans)
+	Ti va di bere qualcosa? (si-no)
+	---
+	$ans= string(2-2)
+
+
+citta($ans)
+	Ti piace invece l'aria di citta? (si-no)
+	---
+	$ans= string(2-2)
+
+
+
+tipico($ans)
+	Ti piacerebbe mangiare o bere qualcosa di tipico?
+	---
+	$ans=yn
+
+
+
+giochi($ans)
+	Ti piace fare giochi di gruppo?
+	---
+	$ans=yn
+
+
+
+mangiare_bere($ans)
+  Vorresti mangiare o bere? (mangiare-bere)
+  ---
+  $ans = string(4-40)
+
+  
+
+brutto_tempo($ans)
+	Ti andrebbe di uscire nonostante il brutto tempo? (si-no)
+	---
+	$ans = string(2-2)

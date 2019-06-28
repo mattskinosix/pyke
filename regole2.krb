@@ -1,0 +1,480 @@
+meteo
+  use meteo($prev,$temp,$risp)
+  when
+    fatti.tempo($prev,$temp,$risp)
+
+ 
+ 
+nucleo_utente_fam
+	use nucleo($nucleo_fam)
+	when 
+		user_questions.tipo_nucleo('Famiglia')
+		$nucleo_fam='Famiglia'
+
+nucleo_utente_amici
+	use nucleo($nucleo_fam)
+	when 
+		user_questions.tipo_nucleo('Amici')
+		$nucleo_fam='Amici'
+
+nucleo_utente_coppia
+	use nucleo($nucleo_fam)
+	when 
+		user_questions.tipo_nucleo('Coppia')
+		$nucleo_fam='Coppia'
+
+nucleo_utente_solo
+	use nucleo($nucleo_fam)
+	when 
+		user_questions.tipo_nucleo('Solo')
+		$nucleo_fam='Solo'
+
+nucleo_utente_affari
+	use nucleo($nucleo_fam)
+	when 
+		user_questions.tipo_nucleo('Affari')
+		$nucleo_fam='Affari'
+
+piace_natura
+	use natura($natura)
+	when
+	 user_questions.natura(True)
+	 $natura='piace_natura'
+
+no_piace_natura
+	use natura($natura)
+	when
+	 user_questions.natura(False)
+	 $natura='no_piace_natura'
+
+scegli_loc_blu
+	use  verde_blu($paesaggio)
+	when
+	  user_questions.mare_o_collina('Blu')
+	  $paesaggio='Blu'
+
+	
+scegli_loc_verde
+	use  verde_blu($paesaggio)
+	when
+	  user_questions.mare_o_collina('Verde')
+	  $paesaggio='Verde'
+
+piace_arte
+	use artista($arte)
+	when
+		user_questions.arte(True)
+		$arte='piace_arte'
+
+
+no_piace_arte
+	use artista($arte)
+	when
+		user_questions.arte(False)
+		$arte='no_piace_arte'
+
+domanda_gen_1_bello_Famiglia
+  use domanda1(Rilassante,bel_tempo,Famiglia,$answer1)
+  when 
+	  natura($answer1)
+	
+domanda_gen_1_brutto_Famiglia
+  use domanda1(Rilassante,brutto_tempo,Famiglia,$answer1)
+  when 
+	  storia($answer1)
+
+domanda_gen_2_bello_Famiglia
+  use domanda2(Rilassante,bel_tempo,Famiglia,piace_natura,$answer2)
+  when
+	  verde_blu($answer2)
+
+domanda_gen_2_brutto_Famiglia
+  use domanda2(Rilassante,brutto_tempo,Famiglia,piace_storia,$answer2)
+  when
+	  artista($answer2)
+
+domada_gen_2_not_bello_Famiglia
+  use domanda2(Rilassante,bel_tempo,Famiglia,no_piace_natura,$answer2)
+  when
+    artista($answer2)
+
+domada_gen_2_not_brutto_Famiglia
+  use domanda2(Rilassante,brutto_tempo,Famiglia,no_piace_storia,$answer2)
+  when
+    shopping($answer2)
+
+
+domanda_gen_1_bello_Coppia
+  use domanda1(Rilassante,bel_tempo,Coppia,$answer1)
+  when 
+	  natura($answer1)
+	
+domanda_gen_1_brutto_Coppia
+  use domanda1(Rilassante,brutto_tempo,Coppia,$answer1)
+  when 
+	  storia($answer1)
+
+domanda_gen_2_bello_Coppia
+  use domanda2(Rilassante,bel_tempo,Coppia,piace_natura,$answer2)
+  when
+    verde_blu($answer2)
+
+
+
+
+
+
+
+domanda_gen_2_brutto_Coppia
+  use domanda2(Rilassante,brutto_tempo,Coppia,piace_storia,$answer2)
+  when
+    artista($answer2)
+
+domada_gen_2_not_bello_Coppia
+  use domanda2(Rilassante,bel_tempo,Coppia,no_piace_natura,$answer2)
+  when
+    citta($answer2)
+
+domada_gen_2_not_brutto_Coppia
+  use domanda2(Rilassante,brutto_tempo,Coppia,no_piace_storia,$answer2)
+  when
+    shopping($answer2)
+
+
+
+
+domanda_gen_1_bello_Solo
+  use domanda1(Rilassante,bel_tempo,Solo,$answer1)
+  when 
+	  natura($answer1)
+	
+domanda_gen_1_brutto_Solo
+  use domanda1(Rilassante,brutto_tempo,Solo,$answer1)
+  when 
+	  storia($answer1)
+
+domanda_gen_2_bello_Solo
+  use domanda2(Rilassante,bel_tempo,Solo,piace_natura,$answer2)
+  when
+	  verde_blu($answer2)
+
+domanda_gen_2_brutto_Solo
+  use domanda2(Rilassante,brutto_tempo,Solo,piace_storia,$answer2)
+  when
+	  artista($answer2)
+
+domada_gen_2_not_bello_Solo
+  use domanda2(Rilassante,bel_tempo,Solo,no_piace_natura,$answer2)
+  when
+    citta($answer2)
+
+domada_gen_2_not_brutto_Solo
+  use domanda2(Rilassante,brutto_tempo,Solo,no_piace_storia,$answer2)
+  when
+    shopping($answer2)
+
+
+
+
+domanda_gen_1_bello_Affari
+  use domanda1(Rilassante,bel_tempo,Affari,$answer1)
+  when 
+	  tempo_occupato($answer1)
+	
+domanda_gen_1_brutto_Affari
+  use domanda1(Rilassante,brutto_tempo,Affari,$answer1)
+  when 
+	  tempo_occupato($answer1)
+
+
+
+domada_gen_2_not_bello_Affari
+  use domanda2(Rilassante,bel_tempo,Affari,no_sempre_occupato,$answer2)
+  when
+    natura($answer2)
+
+domada_gen_2_not_brutto_Affari
+  use domanda2(Rilassante,brutto_tempo,Affari,no_sempre_occupato,$answer2)
+  when
+    storia($answer2)
+
+
+domanda_gen_1_bello_Famiglia_a
+  use domanda1(Avventuriera,bel_tempo,Famiglia,$answer1)
+  when 
+	  natura($answer1)
+	
+domanda_gen_1_brutto_Famiglia_a
+  use domanda1(Avventuriera,brutto_tempo,Famiglia,$answer1)
+  when 
+	  bruttotempo($answer1)
+
+domanda_gen_2_bello_Famiglia_a
+  use domanda2(Avventuriera,bel_tempo,Famiglia,piace_natura,$answer2)
+  when
+	  sport($answer2)
+
+domanda_gen_2_brutto_Famiglia_a
+  use domanda2(Avventuriera,brutto_tempo,Famiglia,piace_bagnarsi,$answer2)
+  when
+	  natura($answer2)
+
+domada_gen_2_not_bello_Famiglia_a
+  use domanda2(Avventuriera,bel_tempo,Famiglia,no_piace_natura,$answer2)
+  when
+    storia($answer2)
+
+domada_gen_2_not_brutto_Famiglia_a
+  use domanda2(Avventuriera,brutto_tempo,Famiglia,no_piace_bagnarsi,$answer2)
+  when
+    storia($answer2)
+
+
+domanda_gen_1_bello_Coppia_a
+  use domanda1(Avventuriera,bel_tempo,Coppia,$answer1)
+  when 
+	  natura($answer1)
+	
+domanda_gen_1_brutto_Coppia_a
+  use domanda1(Avventuriera,brutto_tempo,Coppia,$answer1)
+  when 
+	  bruttotempo($answer1)
+
+domanda_gen_2_bello_Coppia_a
+  use domanda2(Avventuriera,bel_tempo,Coppia,piace_natura,$answer2)
+  when
+	  sport($answer2)
+
+domanda_gen_2_brutto_Coppia_a
+  use domanda2(Avventuriera,brutto_tempo,Coppia,piace_bagnarsi,$answer2)
+  when
+	  natura($answer2)
+
+domada_gen_2_not_bello_Coppia_a
+  use domanda2(Avventuriera,bel_tempo,Coppia,no_piace_natura,$answer2)
+  when
+    storia($answer2)
+
+domada_gen_2_not_brutto_Coppia_a
+  use domanda2(Avventuriera,brutto_tempo,Coppia,no_piace_bagnarsi,$answer2)
+  when
+    storia($answer2)
+
+
+brutto_tempo
+  use bruttotempo($answer1)
+  when 
+	  user_questions.brutto_tempo('si')
+	  $answer1='piace_bagnarsi'
+
+no_brutto_tempo
+  use bruttotempo($answer1)
+  when 
+	user_questions.brutto_tempo('no')
+	$answer1='no_piace_bagnarsi'
+
+
+
+tempo_libero
+  use tempo_occupato($answer1)
+  when
+	  user_questions.tempo('Occupato')
+	  $answer1='sempre_occupato'
+
+no_tempo_libero
+  use tempo_occupato($answer1)
+  when
+	  user_questions.tempo('Libero')
+	  $answer1='no_sempre_occupato'
+
+bere_qualcosa
+  use bere($answer1)
+  when
+	  user_questions.bere('si')
+	  $answer1='bere'
+
+no_bere_qualcosa
+  use bere($answer1)
+  when
+	  user_questions.bere('no')
+	  $answer1='no_bere'
+
+piace_storia
+	use storia($answer1)
+	when 
+		user_questions.storia('si')
+		$answer1='piace_storia'
+
+no_piace_storia
+	use storia($answer1)
+	when 
+		user_questions.storia('no')
+		$answer1='no_piace_storia'
+
+piace_shopping
+	use shopping($answer1)
+	when
+		user_questions.shopping('si')
+		$answer1='piace_shopping'
+
+
+no_piace_shopping
+	use shopping($answer1)
+	when
+		user_questions.shopping('no')
+		$answer1='no_piace_shopping'
+
+scelta_tipo_vacanza_relax
+ use tipologia_vacanza($tipo_vacanza)
+ when
+    user_questions.tipo_vacanza('Rilassante')
+    $tipo_vacanza='Rilassante'
+   
+
+scelta_tipo_vacanza_jamesbond
+ use tipologia_vacanza($tipo_vacanza)
+ when
+    user_questions.tipo_vacanza('Avventuriera')
+    $tipo_vacanza='Avventuriera'
+
+
+piace_sport
+  use sport($answer1)
+  when 
+	user_questions.sport(True)
+	$answer1='piace_sport'
+
+no_piace_sport
+  use sport($answer1)
+  when 
+	user_questions.sport(False)
+	$answer1='no_piace_sport'
+
+scelta_tipo_vacanza_divertimento
+ use tipologia_vacanza($tipo_vacanza)
+ when
+    user_questions.tipo_vacanza('Sfrenata')
+	  $tipo_vacanza='Sfrenata'
+
+
+
+
+
+
+
+fine
+  use conclusione($nucleo_fam,$meteo,$tipo_vacanza,$answer1,$answer2,$tipo)
+  when
+    fatti.tipologia($nucleo_fam,$meteo,$tipo_vacanza,$answer1,$answer2,$tipo)
+
+
+cosa_fare
+  use cosa_fare($prev,$temperatura,$tipo)
+  when 
+	  meteo($prev,$temperatura,$meteo)
+	  nucleo($nucleo_fam)
+	  tipologia_vacanza($tipo_vacanza)
+	  domanda1($tipo_vacanza,$meteo,$nucleo_fam,$answer1)
+	  domanda2($tipo_vacanza,$meteo,$nucleo_fam,$answer1,$answer2)
+	  conclusione($tipo_vacanza,$meteo,$nucleo_fam,$answer1,$answer2,$tipo)
+	
+
+
+
+
+
+mangiare
+	use mangiare($mangiare1)
+	when
+		user_questions.mangiare_bere('mangiare')
+		$mangiare1='mangiare'
+
+
+bere
+	use mangiare($bere)
+	when
+		user_questions.mangiare_bere('bere')
+		$bere='bere'
+
+giochi
+	use giochi($gioco)
+	when
+		user_questions.giochi(True)
+		$gioco='piace_giochi'
+
+no_giochi
+	use giochi($gioco)
+	when
+		user_questions.giochi(False)
+		$gioco='no_piace_giochi'
+
+
+citta
+	use citta($citta)
+	when
+		user_questions.citta(True)
+		$citta='piace_citta'
+
+no_citta
+	use citta($citta)
+	when
+		user_questions.citta(True)
+		$citta='no_piace_citta'
+
+
+tipico
+	use tipico($tipico)
+	when
+		user_questions.tipico(True)
+		$tipico='piace_tipico'
+
+no_tipico
+	use tipico($tipico)
+	when
+		user_questions.tipico(False)
+		$tipico='no_piace_tipico'
+
+
+
+
+domanda_gen_1_amici_rilassante_brutto_tempo
+  use domanda1(Rilassante,brutto_tempo,Amici,$answer1)
+  when
+	  tipico($answer1)
+
+
+domanda_gen_1_amici_rilassante_bel_tempo
+  use domanda1(Rilassante,bel_tempo,Amici,$answer1)
+  when
+	  natura($answer1)
+
+domanda_gen_2_amici_rilassante_brutto_tempo
+  use domanda2(Rilassante,brutto_tempo,Amici,piace_tipico,$answer2)
+  when
+	  mangiare($answer2)
+
+
+domanda_gen_2_amici_rilassante_brutto_tempo_not
+  use domanda2(Rilassante,brutto_tempo,Amici,no_piace_tipico,$answer2)
+  when
+	  giochi($answer2)
+
+domanda_gen_2_amici_rilassante_bel_tempo
+  use domanda2(Rilassante,bel_tempo,Amici,piace_natura,$answer2)
+  when
+	  verde_blu($answer2)
+
+
+domanda_gen_2_amici_rilassante_bel_tempo_not
+  use domanda2(Rilassante,bel_tempo,Amici,no_piace_natura,$answer2)
+  when
+	  citta($answer2)
+
+
+
+domanda_gen_2_bello_Affari
+  use domanda2(Rilassante,$tempo,Affari,sempre_occupato,$answer2)
+  when
+	  bere($answer2)
+
+
